@@ -1,0 +1,20 @@
+<template>
+    <template if:true={country}>
+        <lightning-card title="US Zip Code Information">
+
+            <lightning-card title="Zip Code Details">
+                <p>Country: {country}</p>
+                <p>zipcode: {zipcode}</p>
+                <template for:each={places} for:item="place">
+                    <span key={city} style="font-size:16px;"><i><strong>Place Name:&emsp; {city},  {place.state}</strong></i></span>
+                    <li key={place.latitude}>  Latitude:&emsp; {place.latitude}</li>
+                    <li key={place.longitude}>Longitude:&emsp; {place.longitude}</li>
+                </template>
+
+            </lightning-card>
+
+        </lightning-card>     
+
+    </template>
+    
+</template>

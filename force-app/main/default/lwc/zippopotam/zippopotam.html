@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Zippopotam Code Search!!">
+            <lightning-input  style="width: 300px;" label="Enter a Zip Code" value={zipCode} onchange={setZipCode}></lightning-input>
+            <lightning-button label="Search" onclick={searchZip}></lightning-button>
+    </lightning-card>   
+    
+    <c-zippopotam-child zip-data="ipCodeInfo"></c-zippopotam-child>
+
+    <template if:true={apiResponse}>
+        <lightning-card title="Non US Zip Code Details">
+         <p style="font-size:16px;"><i><strong>  </strong>{msg}</strong></i></p>
+        </lightning-card>
+    </template> 
+</template>
